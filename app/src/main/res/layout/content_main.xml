@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".actividades.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fechaInicial"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:layout_below="@+id/tvFechaInicial"
+                android:layout_alignLeft="@+id/fechaFinal"
+                android:layout_alignStart="@+id/fechaFinal"
+                android:layout_centerHorizontal="true"/>
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fechaFinal"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:layout_below="@+id/tvFechaFinal"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/fechaInicial"
+                android:id="@+id/tvFechaInicial"
+                android:layout_below="@+id/rgTipo"
+                android:layout_alignRight="@+id/textView2"
+                android:layout_alignEnd="@+id/textView2"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/fechaFinal"
+                android:id="@+id/tvFechaFinal"
+                android:layout_below="@+id/fechaInicial"
+                android:layout_centerHorizontal="true" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/generarGrafico"
+                android:id="@+id/btGenerar"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/fechaFinal"
+                android:onClick="generarGrafico" />
+
+            <RadioGroup
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/spinner"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/rgTipo">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/llamadasEnviadas"
+                    android:id="@+id/rbEnviados"
+                    android:textColor="#0f8fff"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/llamadasPerdidas"
+                    android:id="@+id/rbPerdidas"
+                    android:textColor="#d21111"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/llamadasRecibidas"
+                    android:id="@+id/rbRecibida"
+                    android:textColor="#06bb06"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/llamadasTotales"
+                    android:id="@+id/rbTotal"
+                    android:textColor="#be1aff"
+                    android:checked="false" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></GridLayout>
+            </RadioGroup>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

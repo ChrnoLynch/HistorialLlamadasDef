@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HistorialLlamadas</string>
+    <string name="action_settings">Settings</string>
+    <string name="llamadasPerdidas">Llamadas Perdidas</string>
+    <string name="llamadasRecibidas">Llamadas Recibidas</string>
+    <string name="llamadasEnviadas">Llamadas Enviadas</string>
+    <string name="llamadasTotales">Llamadas Totales</string>
+    <string name="fechaInicial">Fecha Inicial</string>
+    <string name="fechaFinal">Fecha Final</string>
+    <string name="generarGrafico">Generar Grafico</string>
+</resources>

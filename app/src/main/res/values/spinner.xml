@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="llamadas">
+        <item>Llamadas Semanales</item>
+        <item>Numeros Populares</item>
+    </string-array>
+    <string-array name="graficos">
+        <item>Columnas</item>
+        <item>Area</item>
+        <item>Lineas</item>
+        <item>Queso</item>
+        <item>Donuts</item>
+        <item>Barras</item>
+    </string-array>
+</resources>
